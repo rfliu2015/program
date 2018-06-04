@@ -12,114 +12,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ReadAddIFrame.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/iframe/ReadAddIFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BookAddIFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iframe/BookAddIFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1960">
+            <state relative-caret-position="599">
               <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#setMainPanel#0;class#BookAddIFrame#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookModiAndDelFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iframe/BookModiAndDelFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-              <folding>
-                <element signature="docComment;method#setMainPanel#0;class#BookModiAndDelFrame#0" />
-                <element signature="docComment;method#getBookInfos#0;class#BookModiAndDelFrame#0" />
-                <element signature="method#getBookInfos#0;class#BookModiAndDelFrame#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/Dao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="187" column="49" selection-start-line="187" selection-start-column="49" selection-end-line="187" selection-end-column="49" />
-              <folding>
-                <element signature="docComment;method#Dao#0;class#Dao#0" />
-                <element signature="method#Dao#0;class#Dao#0" />
-                <element signature="docComment;method#check#0;class#Dao#0" />
-                <element signature="method#check#0;class#Dao#0" />
-                <element signature="docComment;method#selectBookCategory#0;class#Dao#0" />
-                <element signature="method#selectBookCategory#0;class#Dao#0" />
-                <element signature="docComment;method#insertBook#0;class#Dao#0" />
-                <element signature="method#insertBook#0;class#Dao#0" />
-                <element signature="docComment;method#selectBookInfo#0;class#Dao#0" />
-                <element signature="method#selectBookInfo#0;class#Dao#0" />
-                <element signature="method#selectBookInfo#1;class#Dao#0" />
-                <element signature="method#updateBook#0;class#Dao#0" />
-                <element signature="docComment;method#close#0;class#Dao#0" />
-                <element signature="method#close#0;class#Dao#0" />
-                <element signature="docComment;method#executeQuery#0;class#Dao#0" />
-                <element signature="method#executeQuery#0;class#Dao#0" />
-                <element signature="docComment;method#executeUpdate#0;class#Dao#0" />
-                <element signature="method#executeUpdate#0;class#Dao#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Library.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/Library.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="131" selection-start-line="131" selection-end-line="131" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#main#0;class#Library#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreatecdIcon.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/CreatecdIcon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuActions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/MenuActions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-              <folding>
-                <element signature="docComment;class#BookAddAction#0;class#MenuActions#0" />
-                <element signature="class#BookAddAction#0;class#MenuActions#0" />
-                <element signature="method#BookAddAction#0;class#BookAddAction#0;class#MenuActions#0" />
-                <element signature="method#actionPerformed#0;class#BookAddAction#0;class#MenuActions#0" />
-                <element signature="class#BookModiAndDelAction#0;class#MenuActions#0" />
-                <element signature="method#BookModiAndDelAction#0;class#BookModiAndDelAction#0;class#MenuActions#0" />
-                <element signature="method#actionPerformed#0;class#BookModiAndDelAction#0;class#MenuActions#0" />
-                <element signature="class#ExitAction#0;class#MenuActions#0" />
-                <element signature="method#ExitAction#0;class#ExitAction#0;class#MenuActions#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapPz.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JComPz/MapPz.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -158,20 +67,22 @@
         <option value="$PROJECT_DIR$/src/iframe/BookAddIFrame.java" />
         <option value="$PROJECT_DIR$/src/main/MenuActions.java" />
         <option value="$PROJECT_DIR$/src/main/Library.java" />
+        <option value="$PROJECT_DIR$/src/iframe/ReadAddIFrame.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="48" />
-    <option name="y" value="70" />
-    <option name="width" value="1234" />
-    <option name="height" value="620" />
+    <option name="x" value="663" />
+    <option name="y" value="126" />
+    <option name="width" value="1346" />
+    <option name="height" value="648" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,18 +93,7 @@
             <path>
               <item name="my_library" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_library" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_library" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_library" type="b2602c69:ProjectViewProjectNode" />
@@ -201,35 +101,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="iframe" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="my_library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="JComPz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -347,19 +222,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" order="3" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32934132" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" weight="0.21107784" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" weight="0.21107784" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48353294" visible="true" weight="0.20058565" />
-      <window_info id="Structure" order="1" sideWeight="0.5164671" side_tool="true" visible="true" weight="0.20058565" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48203593" visible="true" weight="0.20058565" />
+      <window_info id="Structure" order="1" sideWeight="0.51796407" side_tool="true" visible="true" weight="0.20058565" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.26497006" />
@@ -370,6 +245,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32934132" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -381,13 +257,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/iframe/BookLoginIFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2120">
-          <caret line="106" column="50" selection-start-line="106" selection-start-column="50" selection-end-line="106" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Operator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -752,7 +621,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/Dao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="500">
           <caret line="187" column="49" selection-start-line="187" selection-start-column="49" selection-end-line="187" selection-end-column="49" />
           <folding>
             <element signature="docComment;method#Dao#0;class#Dao#0" />
@@ -784,20 +653,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iframe/BookAddIFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1960">
-          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#setMainPanel#0;class#BookAddIFrame#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/iframe/BookModiAndDelFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
+        <state relative-caret-position="900">
           <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
           <folding>
             <element signature="docComment;method#setMainPanel#0;class#BookModiAndDelFrame#0" />
@@ -834,11 +692,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="20">
           <caret line="131" selection-start-line="131" selection-end-line="131" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#main#0;class#Library#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iframe/BookAddIFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iframe/ReadAddIFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

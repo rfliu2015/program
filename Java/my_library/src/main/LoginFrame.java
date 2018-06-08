@@ -1,56 +1,75 @@
-package iframe;
+package main;
 
-import main.Library;
 import model.Operator;
 import util.CreatecdIcon;
 import dao.Dao;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class BookLoginIFrame extends JFrame {
-    private final JButton login = new JButton("登录");
-    private final JTextField username = new JTextField(10);
-    private final JPasswordField password = new JPasswordField(20);
+public class LoginFrame extends JFrame {
+    private JButton loginButton;
+    private JTextField username;
+    private JPasswordField password;
 
-    public BookLoginIFrame() {
+    private JPanel mainPanel;
+    private JPanel southPanel;
+
+    public LoginFrame() {
         super();
 
         /* frame的设置 */
         BorderLayout borderLayout = new BorderLayout();
         setLayout(borderLayout);
         setTitle("图书馆管理系统登录");
-        setSize(285, 194);
+        setSize(279, 194);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);                                        //设置窗体不可改变大小
+
         /* frame的位置设定 */
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension screenSize = toolkit.getScreenSize();
         setLocation((screenSize.width - getWidth()) / 2, (screenSize.height - getHeight()) / 2);
 
-        setMainPanel();
+        /* northPanel setting */
+        ImageIcon loginIcon = CreatecdIcon.add("login.jpg");
+        JLabel imageLabel = new JLabel(loginIcon);
+        imageLabel.setOpaque(true);
+        imageLabel.setBackground(Color.GREEN);
+        imageLabel.setPreferredSize(new Dimension(279, 60));
+        this.add(imageLabel, BorderLayout.NORTH);
 
+        /* mainPanel setting */
+        setMainPanel();
+        this.add(mainPanel);
+
+        /* southPanel setting */
+        setSouthPanel();
+        this.add(southPanel, BorderLayout.SOUTH);
+
+        /* at last */
         setVisible(true);
-        setResizable(false);                                        //设置窗体不可改变大小
     }
 
     public static void main(String[] args) {
-        new BookLoginIFrame();
+        new LoginFrame();
     }
 
     private class BookLoginAction implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             Operator user = Dao.check(username.getText(), new String(password.getPassword()));
-            if (user.getName() != null) {
+            if (user != null && user.getName() != null) {
                 try {
                     Library library = new Library();
                     library.setVisible(true);
-                    BookLoginIFrame.this.setVisible(false);
+                    LoginFrame.this.setVisible(false);
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
@@ -72,62 +91,50 @@ public class BookLoginIFrame extends JFrame {
 
     private void setMainPanel() {
         /* mainPanel设置 */
-        JPanel mainPanel = new JPanel(new BorderLayout());
-        mainPanel.setBorder(new EmptyBorder(0, 0, 0, 0));
-        /* mainPanel的north部分是一个Jlabel */
-        JLabel imageLabel = new JLabel();
-        ImageIcon loginIcon = CreatecdIcon.add("login.jpg");
-        imageLabel.setIcon(loginIcon);
-        imageLabel.setOpaque(true);
-        imageLabel.setBackground(Color.GREEN);
-        imageLabel.setPreferredSize(new Dimension(260, 60));
-        mainPanel.add(imageLabel, BorderLayout.NORTH);
-
-        /* mainPanel的center部分是一个Jpanel */
-        JPanel centrePanel = new JPanel();
+        mainPanel = new JPanel(new BorderLayout());
         GridLayout gridLayout = new GridLayout(2, 2);
         gridLayout.setHgap(5);
         gridLayout.setVgap(20);
-        centrePanel.setLayout(gridLayout);
+        mainPanel.setLayout(gridLayout);
+        mainPanel.setBorder(new EmptyBorder(0, 0, 5, 5));
 
         JLabel usernameLabel = new JLabel("用 户 名:");
         usernameLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        usernameLabel.setPreferredSize(new Dimension(0, 0));
-        usernameLabel.setMinimumSize(new Dimension(0, 0));
-        centrePanel.add(usernameLabel);
-        username.setPreferredSize(new Dimension(0, 0));
-        centrePanel.add(username);
+        username = new JTextField(10);
+        mainPanel.add(usernameLabel);
+        mainPanel.add(username);
 
-        JLabel pwdLabel = new JLabel("密    码:");
+        JLabel pwdLabel = new JLabel("密      码:");
         pwdLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        password = new JPasswordField(10);
         password.setEchoChar('*');
         //password.setDocument(new MyDocument(6));
         password.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {  //回车键的操作
                 if (e.getKeyCode() == 10) {
-                    login.doClick();
+                    loginButton.doClick();
                 }
             }
         });
 
-        centrePanel.add(pwdLabel);
-        centrePanel.add(password);
+        mainPanel.add(pwdLabel);
+        mainPanel.add(password);
+    }
 
-        mainPanel.add(centrePanel);
+    private void setSouthPanel() {
+        FlowLayout layout = new FlowLayout(FlowLayout.CENTER, 20, 5);
+        southPanel = new JPanel(layout);
+        southPanel.setBorder(new LineBorder(SystemColor.activeCaptionBorder, 1, false));
 
-        /* mainPanel的sourthPanel是两个button */
-        JPanel southPanel = new JPanel();
-        login.addActionListener(new BookLoginAction());
+        loginButton = new JButton("登录");
+        loginButton.addActionListener(new BookLoginAction());
+
         JButton reset = new JButton("重置");
         reset.addActionListener(new BookResetAction());
-        southPanel.add(login);
+
+        southPanel.add(loginButton);
         southPanel.add(reset);
-
-        mainPanel.add(southPanel, BorderLayout.SOUTH);
-
-        //over
-        add(mainPanel);
     }
 }
 

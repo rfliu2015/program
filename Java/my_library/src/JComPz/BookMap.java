@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 
-public class MapPz {
+public class BookMap {
     private static Map<Integer, BookType> map = new HashMap<>();
     private static Map<String, BookType> map2 = new HashMap<>();
 

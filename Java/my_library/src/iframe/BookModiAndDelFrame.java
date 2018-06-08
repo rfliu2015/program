@@ -1,6 +1,6 @@
 package iframe;
 
-import JComPz.MapPz;
+import JComPz.BookMap;
 import dao.Dao;
 import model.BookInfo;
 import model.BookType;
@@ -39,7 +39,7 @@ public class BookModiAndDelFrame extends JInternalFrame {
         setLayout(borderLayout);
         setIconifiable(true);
         setClosable(true);
-        setBounds(100, 100, 593, 406);
+        setBounds(80, 100, 620, 406);
 
         /* set northPanel */
         ImageIcon icon = CreatecdIcon.add("bookmodify.jpg");
@@ -52,7 +52,7 @@ public class BookModiAndDelFrame extends JInternalFrame {
         setBottomePanel();
 
         /* at last */
-        add(north, BorderLayout.NORTH);
+        this.add(north, BorderLayout.NORTH);
         getContentPane().add(mainPanel);
         getContentPane().add(bottomePanel, BorderLayout.SOUTH);
         System.out.println("I'm running!");
@@ -95,7 +95,7 @@ public class BookModiAndDelFrame extends JInternalFrame {
                 String price_ = table.getValueAt(row, 7).toString().trim();
 
                 ISBN.setText(isbn_);
-                bookTypeModel.setSelectedItem(MapPz.getType(type_));
+                bookTypeModel.setSelectedItem(BookMap.getType(type_));
                 bookName.setText(name_);
                 author.setText(author_);
                 publisher.setText(publisher_);

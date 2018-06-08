@@ -1,6 +1,5 @@
 package main;
 
-import iframe.BookLoginIFrame;
 import util.CreatecdIcon;
 
 import javax.swing.*;
@@ -58,9 +57,12 @@ public class Library extends JFrame {
         baseMenu.add(readerInfoManagerMItem);
         baseMenu.add(bookTypeManagerMItem);
         baseMenu.add(bookInfoManagerMItem);
-
+        //读者信息管理
+        readerInfoManagerMItem.add(MenuActions.READER_ADD);
+        readerInfoManagerMItem.add(MenuActions.READER_MODI_AND_DEL);
+        //图书信息管理
         bookInfoManagerMItem.add(MenuActions.BOOK_ADD);
-        bookInfoManagerMItem.add(MenuActions.BOOK_MODI_AND_DEL);
+        bookInfoManagerMItem.add(MenuActions.BOOK_MODI);
 
         /* bookOrderMenu, "新书订购管理" */
         bookOrderMenu = new JMenu();  //这里string与icon矛盾
@@ -100,7 +102,7 @@ public class Library extends JFrame {
         toolBar.add(bookAddButton);
 
         /* bookModiAndDelButton */
-        JButton bookModiAndDelButton = new JButton(MenuActions.BOOK_MODI_AND_DEL);
+        JButton bookModiAndDelButton = new JButton(MenuActions.BOOK_MODI);
         bookModiAndDelButton.setIcon(CreatecdIcon.add("bookModiAndDeltb.jpg"));
         bookModiAndDelButton.setHideActionText(true);
         toolBar.add(bookModiAndDelButton);
@@ -134,16 +136,15 @@ public class Library extends JFrame {
         toolBar.add(bookCheckButton);
 
         /* readerAddButton */
-        JButton readerAddButton = new JButton();
-        ;//action
+        JButton readerAddButton = new JButton(MenuActions.READER_ADD);
+        readerAddButton.setHideActionText(true);
         readerAddButton.setIcon(new ImageIcon(
                 getClass().getResource("/readerAddtb.jpg")));
         readerAddButton.setHideActionText(true);
         toolBar.add(readerAddButton);
 
         /* readerModiAndDelButton */
-        JButton readerModiAndDelButton = new JButton();
-        ;//action
+        JButton readerModiAndDelButton = new JButton(MenuActions.READER_MODI_AND_DEL);
         readerModiAndDelButton.setIcon(new ImageIcon(
                 getClass().getResource("/readerModiAndDeltb.jpg")));
         readerModiAndDelButton.setHideActionText(true);
@@ -164,7 +165,7 @@ public class Library extends JFrame {
     public static void main(String[] args) {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            new BookLoginIFrame();
+            new LoginFrame();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -172,6 +173,5 @@ public class Library extends JFrame {
 
     public static void addIFrame(JInternalFrame iframe) {
         DESKTOP_PANE.add(iframe);
-        iframe.setVisible(true);
     }
 }

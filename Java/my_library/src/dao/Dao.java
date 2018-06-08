@@ -1,15 +1,12 @@
 package dao;
 
-import JComPz.MapPz;
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import JComPz.BookMap;
 import model.BookInfo;
 import model.BookType;
 import model.Operator;
+import model.Reader;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -119,6 +116,32 @@ public class Dao {
             System.out.println(e.getMessage());
         }
 
+        close();
+        return successful;
+    }
+
+    /**
+     * 添加新的读者至数据库中
+     *
+     * @param r
+     * @return
+     */
+    public static boolean insertReader(Reader r) {
+        boolean successful = false;
+        String sql = "INSERT INTO tb_reader(name,sex,age,identityCard,date,maxNum,tel," +
+                "keepMoney,zj,zy,ISBN,bztime) VALUES('" + r.getName() + "','" + r.getSex() + "'," + r
+                .getAge() + ",'" + r.getIdentityCard() + "','" + Date.valueOf(r.getValidDate()) + "'," + r
+                .getMaxNum() + ",'" + r.getTelNumber() + "','" + r.getKeepMoney() + "'," + r
+                .getIdentityCardType() + ",'" + r.getOccupation() + "','" + r.getNumber() +
+                "','" + Date.valueOf(r.getValidDate()) + "')";
+        try {
+            executeUpdate(sql);
+            successful = true;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        Dao.close();
         return successful;
     }
 
@@ -144,7 +167,7 @@ public class Dao {
                 bookInfo.setPublisher(resultSet.getString("publisher"));
                 bookInfo.setTranslator(resultSet.getString("translator"));
                 bookInfo.setTypeId(resultSet.getInt("typeid"));
-                bookInfo.setBookType(MapPz.getType(bookInfo.getTypeId()));
+                bookInfo.setBookType(BookMap.getType(bookInfo.getTypeId()));
 
                 bookInfoList.add(bookInfo);
             }
@@ -156,6 +179,9 @@ public class Dao {
         return bookInfoList;
     }
 
+    /**
+     * 返回所有图书信息.
+     */
     public static List<BookInfo> selectBookInfo() {
         String sql = "SELECT * FROM tb_bookinfo";
         List<BookInfo> bookInfoList = new ArrayList<>();
@@ -173,7 +199,7 @@ public class Dao {
                 bookInfo.setPublisher(resultSet.getString("publisher"));
                 bookInfo.setTranslator(resultSet.getString("translator"));
                 bookInfo.setTypeId(resultSet.getInt("typeid"));
-                bookInfo.setBookType(MapPz.getType(bookInfo.getTypeId()));
+                bookInfo.setBookType(BookMap.getType(bookInfo.getTypeId()));
 
                 bookInfoList.add(bookInfo);
             }

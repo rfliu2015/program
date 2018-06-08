@@ -36,7 +36,6 @@ public class BookAddIFrame extends JInternalFrame {
         BorderLayout borderLayout = new BorderLayout();
         setLayout(borderLayout);
         setBounds(100, 100, 596, 260);
-//        System.out.println("BookAddIFrema inside!");
 
         /* mainPanel */
         setMainPanel();

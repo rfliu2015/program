@@ -68,8 +68,8 @@ public class LoginFrame extends JFrame {
             if (user != null && user.getName() != null) {
                 try {
                     Library library = new Library();
-                    library.setVisible(true);
                     LoginFrame.this.setVisible(false);
+                    library.setVisible(true);
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }

@@ -3,7 +3,7 @@ package main;
 import iframe.BookAddIFrame;
 import iframe.BookModiAndDelFrame;
 import iframe.ReaderAddIFrame;
-import iframe.ReaderModiAndDel;
+import iframe.ReaderModiAndDelIFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -106,7 +106,7 @@ public class MenuActions {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (!frames.containsKey("读者信息修改与删除") || frames.get("读者信息修改与删除").isClosed()) {
-                JInternalFrame readerModiAndDel = new ReaderModiAndDel();
+                JInternalFrame readerModiAndDel = new ReaderModiAndDelIFrame();
                 frames.put("读者信息修改与删除", readerModiAndDel);
                 Library.addIFrame(readerModiAndDel);
                 readerModiAndDel.setVisible(true);

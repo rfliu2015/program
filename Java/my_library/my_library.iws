@@ -15,8 +15,8 @@
       <file leaf-file-name="Dao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/Dao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="181" column="4" selection-start-line="181" selection-start-column="4" selection-end-line="181" selection-end-column="4" />
+            <state relative-caret-position="12">
+              <caret line="290" column="36" selection-start-line="290" selection-start-column="36" selection-end-line="290" selection-end-column="36" />
               <folding>
                 <element signature="docComment;method#Dao#0;class#Dao#0" />
                 <element signature="method#Dao#0;class#Dao#0" />
@@ -25,20 +25,17 @@
                 <element signature="docComment;method#selectBookCategory#0;class#Dao#0" />
                 <element signature="method#selectBookCategory#0;class#Dao#0" />
                 <element signature="docComment;method#insertBook#0;class#Dao#0" />
-                <element signature="method#insertBook#0;class#Dao#0" />
                 <element signature="docComment;method#insertReader#0;class#Dao#0" />
-                <element signature="method#insertReader#0;class#Dao#0" />
                 <element signature="docComment;method#selectBookInfo#0;class#Dao#0" />
                 <element signature="method#selectBookInfo#0;class#Dao#0" />
                 <element signature="docComment;method#selectBookInfo#1;class#Dao#0" />
                 <element signature="method#selectBookInfo#1;class#Dao#0" />
-                <element signature="method#updateBook#0;class#Dao#0" />
+                <element signature="method#selectReader#0;class#Dao#0" />
                 <element signature="docComment;method#close#0;class#Dao#0" />
                 <element signature="method#close#0;class#Dao#0" />
                 <element signature="docComment;method#executeQuery#0;class#Dao#0" />
                 <element signature="method#executeQuery#0;class#Dao#0" />
                 <element signature="docComment;method#executeUpdate#0;class#Dao#0" />
-                <element signature="method#executeUpdate#0;class#Dao#0" />
               </folding>
             </state>
           </provider>
@@ -47,59 +44,96 @@
       <file leaf-file-name="ReaderMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JComPz/ReaderMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            <state relative-caret-position="600">
+              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="initializer##0;class#ReaderMap#0" />
                 <element signature="e#993#994#0" expanded="true" />
                 <element signature="e#1043#1044#0" expanded="true" />
+                <element signature="e#1097#1098#0" expanded="true" />
+                <element signature="e#1146#1147#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookAddIFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iframe/BookAddIFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="146" column="55" selection-start-line="146" selection-start-column="55" selection-end-line="146" selection-end-column="55" />
-              <folding>
-                <element signature="docComment;method#setMainPanel#0;class#BookAddIFrame#0" />
-                <element signature="method#buildBook#0;class#4595:7507" />
-                <element signature="method#checkValid#0;class#4595:7507" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuActions.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MenuActions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/MenuActions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
+            <state relative-caret-position="204">
+              <caret line="98" column="71" lean-forward="true" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="71" />
               <folding>
+                <element signature="initializer##0;class#MenuActions#0" />
                 <element signature="docComment;class#BookAddAction#0;class#MenuActions#0" />
                 <element signature="class#BookAddAction#0;class#MenuActions#0" />
                 <element signature="method#BookAddAction#0;class#BookAddAction#0;class#MenuActions#0" />
                 <element signature="method#actionPerformed#0;class#BookAddAction#0;class#MenuActions#0" />
                 <element signature="class#BookModiAction#0;class#MenuActions#0" />
-                <element signature="method#BookModiAndDelAction#0;class#BookModiAndDelAction#0;class#MenuActions#0" />
-                <element signature="method#actionPerformed#0;class#BookModiAndDelAction#0;class#MenuActions#0" />
+                <element signature="method#BookModiAction#0;class#BookModiAction#0;class#MenuActions#0" />
+                <element signature="method#actionPerformed#0;class#BookModiAction#0;class#MenuActions#0" />
                 <element signature="class#ExitAction#0;class#MenuActions#0" />
                 <element signature="method#ExitAction#0;class#ExitAction#0;class#MenuActions#0" />
+                <element signature="class#ReaderAddAction#0;class#MenuActions#0" />
                 <element signature="method#ReaderAddAction#0;class#ReaderAddAction#0;class#MenuActions#0" />
                 <element signature="method#actionPerformed#0;class#ReaderAddAction#0;class#MenuActions#0" />
+                <element signature="class#ReaderModiAndDelAction#0;class#MenuActions#0" />
+                <element signature="method#ReaderModiAndDelAction#0;class#ReaderModiAndDelAction#0;class#MenuActions#0" />
+                <element signature="method#actionPerformed#0;class#ReaderModiAndDelAction#0;class#MenuActions#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReaderModiAndDel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iframe/ReaderModiAndDel.java">
+      <file leaf-file-name="ReaderModiAndDelIFrame.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/iframe/ReaderModiAndDelIFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+            <state relative-caret-position="145">
+              <caret line="332" selection-start-line="332" selection-end-line="332" />
+              <folding>
+                <element signature="method#ReaderModiAndDelIFrame#0;class#ReaderModiAndDelIFrame#0" />
+                <element signature="class#9084:9222" />
+                <element signature="e#10611#10612#0" expanded="true" />
+                <element signature="e#10670#10671#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Reader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+              <folding>
+                <element signature="e#1522#1523#0" expanded="true" />
+                <element signature="e#1554#1555#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReaderAddIFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iframe/ReaderAddIFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="178" column="32" selection-start-line="178" selection-start-column="32" selection-end-line="178" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookModiAndDelFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iframe/BookModiAndDelFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="193" column="44" lean-forward="true" selection-start-line="193" selection-start-column="44" selection-end-line="193" selection-end-column="44" />
+              <folding>
+                <element signature="docComment;method#setMainPanel#0;class#BookModiAndDelFrame#0" />
+                <element signature="method#buildBook#0;class#6672:9720" />
+                <element signature="method#checkValid#0;class#6672:9720" />
+                <element signature="docComment;method#getBookInfos#0;class#BookModiAndDelFrame#0" />
+                <element signature="method#getBookInfos#0;class#BookModiAndDelFrame#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,12 +141,27 @@
       <file leaf-file-name="Library.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="146" column="84" selection-start-line="146" selection-start-column="84" selection-end-line="146" selection-end-column="84" />
+            <state relative-caret-position="220">
+              <caret line="91" column="37" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
               <folding>
                 <element signature="method#Library#0;class#Library#0" />
+                <element signature="method#creatMenuBar#0;class#Library#0" />
+                <element signature="method#createToolBar#0;class#Library#0" />
                 <element signature="docComment;method#main#0;class#Library#0" />
                 <element signature="method#main#0;class#Library#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/LoginFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1160">
+              <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+              <folding>
+                <element signature="method#actionPerformed#0;class#BookResetAction#0;class#LoginFrame#0" />
+                <element signature="method#setMainPanel#0;class#LoginFrame#0" />
               </folding>
             </state>
           </provider>
@@ -130,6 +179,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>;</find>
+      <find>table</find>
+      <find>butt</find>
+      <find>maleb</find>
+      <find>valueof</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -151,14 +204,15 @@
         <option value="$PROJECT_DIR$/src/model/Reader.java" />
         <option value="$PROJECT_DIR$/src/iframe/BookLoginIFrame.java" />
         <option value="$PROJECT_DIR$/src/iframe/LoginFrame.java" />
-        <option value="$PROJECT_DIR$/src/main/LoginFrame.java" />
-        <option value="$PROJECT_DIR$/src/iframe/BookModiAndDelFrame.java" />
-        <option value="$PROJECT_DIR$/src/dao/Dao.java" />
         <option value="$PROJECT_DIR$/src/iframe/ReaderAddIFrame.java" />
         <option value="$PROJECT_DIR$/src/JComPz/ReaderMap.java" />
         <option value="$PROJECT_DIR$/src/main/Library.java" />
         <option value="$PROJECT_DIR$/src/iframe/ReaderModiAndDel.java" />
         <option value="$PROJECT_DIR$/src/main/MenuActions.java" />
+        <option value="$PROJECT_DIR$/src/iframe/BookModiAndDelFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/LoginFrame.java" />
+        <option value="$PROJECT_DIR$/src/dao/Dao.java" />
+        <option value="$PROJECT_DIR$/src/iframe/ReaderModiAndDelIFrame.java" />
       </list>
     </option>
   </component>
@@ -173,8 +227,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,6 +261,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -216,7 +270,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -269,6 +323,17 @@
         </pattern>
       </extension>
     </configuration>
+    <configuration name="ReaderModiAndDelIFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="iframe.ReaderModiAndDelIFrame" />
+      <module name="my_library" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iframe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -314,10 +379,12 @@
       <item itemvalue="Application.LoginFrame" />
       <item itemvalue="Application.Library" />
       <item itemvalue="Application.ReaderAddIFrame" />
+      <item itemvalue="Application.ReaderModiAndDelIFrame" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Library" />
+        <item itemvalue="Application.ReaderModiAndDelIFrame" />
         <item itemvalue="Application.ReaderAddIFrame" />
         <item itemvalue="Application.LoginFrame" />
       </list>
@@ -338,6 +405,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" order="3" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -345,34 +413,34 @@
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32934132" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" weight="0.21107784" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" weight="0.37574852" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.37574852" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4760479" visible="true" weight="0.20058565" />
-      <window_info id="Structure" order="1" sideWeight="0.52395207" side_tool="true" visible="true" weight="0.20058565" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.470024" visible="true" weight="0.20058565" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24963397" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
+      <window_info id="Structure" order="1" sideWeight="0.529976" side_tool="true" visible="true" weight="0.20058565" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.26497006" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.21107784" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4800759" visible="true" weight="0.20058565" />
       <window_info id="Structure" order="1" sideWeight="0.5199241" side_tool="true" visible="true" weight="0.20058565" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.26497006" />
@@ -382,7 +450,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Key Promoter X" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32934132" />
       <window_info id="Favorites" order="4" side_tool="true" />
     </layout-to-restore>
@@ -409,6 +477,8 @@
           <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
           <folding>
             <element signature="method#Library#0;class#Library#0" />
+            <element signature="method#creatMenuBar#0;class#Library#0" />
+            <element signature="method#createToolBar#0;class#Library#0" />
             <element signature="docComment;method#main#0;class#Library#0" />
             <element signature="method#main#0;class#Library#0" />
           </folding>
@@ -434,20 +504,17 @@
             <element signature="docComment;method#selectBookCategory#0;class#Dao#0" />
             <element signature="method#selectBookCategory#0;class#Dao#0" />
             <element signature="docComment;method#insertBook#0;class#Dao#0" />
-            <element signature="method#insertBook#0;class#Dao#0" />
             <element signature="docComment;method#insertReader#0;class#Dao#0" />
-            <element signature="method#insertReader#0;class#Dao#0" />
             <element signature="docComment;method#selectBookInfo#0;class#Dao#0" />
             <element signature="method#selectBookInfo#0;class#Dao#0" />
             <element signature="docComment;method#selectBookInfo#1;class#Dao#0" />
             <element signature="method#selectBookInfo#1;class#Dao#0" />
-            <element signature="method#updateBook#0;class#Dao#0" />
+            <element signature="method#selectReader#0;class#Dao#0" />
             <element signature="docComment;method#close#0;class#Dao#0" />
             <element signature="method#close#0;class#Dao#0" />
             <element signature="docComment;method#executeQuery#0;class#Dao#0" />
             <element signature="method#executeQuery#0;class#Dao#0" />
             <element signature="docComment;method#executeUpdate#0;class#Dao#0" />
-            <element signature="method#executeUpdate#0;class#Dao#0" />
           </folding>
         </state>
       </provider>
@@ -479,6 +546,8 @@
           <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
           <folding>
             <element signature="method#Library#0;class#Library#0" />
+            <element signature="method#creatMenuBar#0;class#Library#0" />
+            <element signature="method#createToolBar#0;class#Library#0" />
             <element signature="docComment;method#main#0;class#Library#0" />
             <element signature="method#main#0;class#Library#0" />
           </folding>
@@ -554,6 +623,8 @@
           <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
           <folding>
             <element signature="method#Library#0;class#Library#0" />
+            <element signature="method#creatMenuBar#0;class#Library#0" />
+            <element signature="method#createToolBar#0;class#Library#0" />
             <element signature="docComment;method#main#0;class#Library#0" />
             <element signature="method#main#0;class#Library#0" />
           </folding>
@@ -572,20 +643,17 @@
             <element signature="docComment;method#selectBookCategory#0;class#Dao#0" />
             <element signature="method#selectBookCategory#0;class#Dao#0" />
             <element signature="docComment;method#insertBook#0;class#Dao#0" />
-            <element signature="method#insertBook#0;class#Dao#0" />
             <element signature="docComment;method#insertReader#0;class#Dao#0" />
-            <element signature="method#insertReader#0;class#Dao#0" />
             <element signature="docComment;method#selectBookInfo#0;class#Dao#0" />
             <element signature="method#selectBookInfo#0;class#Dao#0" />
             <element signature="docComment;method#selectBookInfo#1;class#Dao#0" />
             <element signature="method#selectBookInfo#1;class#Dao#0" />
-            <element signature="method#updateBook#0;class#Dao#0" />
+            <element signature="method#selectReader#0;class#Dao#0" />
             <element signature="docComment;method#close#0;class#Dao#0" />
             <element signature="method#close#0;class#Dao#0" />
             <element signature="docComment;method#executeQuery#0;class#Dao#0" />
             <element signature="method#executeQuery#0;class#Dao#0" />
             <element signature="docComment;method#executeUpdate#0;class#Dao#0" />
-            <element signature="method#executeUpdate#0;class#Dao#0" />
           </folding>
         </state>
       </provider>
@@ -723,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/CreatecdIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JComPz/BookMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -737,94 +798,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
-          <folding>
-            <element signature="e#1554#1555#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1646#1647#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/login.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iframe/BookModiAndDelFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-          <folding>
-            <element signature="docComment;method#setMainPanel#0;class#BookModiAndDelFrame#0" />
-            <element signature="docComment;method#getBookInfos#0;class#BookModiAndDelFrame#0" />
-            <element signature="method#getBookInfos#0;class#BookModiAndDelFrame#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iframe/ReaderAddIFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="243" column="51" selection-start-line="243" selection-start-column="51" selection-end-line="243" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="181" column="4" selection-start-line="181" selection-start-column="4" selection-end-line="181" selection-end-column="4" />
-          <folding>
-            <element signature="docComment;method#Dao#0;class#Dao#0" />
-            <element signature="method#Dao#0;class#Dao#0" />
-            <element signature="docComment;method#check#0;class#Dao#0" />
-            <element signature="method#check#0;class#Dao#0" />
-            <element signature="docComment;method#selectBookCategory#0;class#Dao#0" />
-            <element signature="method#selectBookCategory#0;class#Dao#0" />
-            <element signature="docComment;method#insertBook#0;class#Dao#0" />
-            <element signature="method#insertBook#0;class#Dao#0" />
-            <element signature="docComment;method#insertReader#0;class#Dao#0" />
-            <element signature="method#insertReader#0;class#Dao#0" />
-            <element signature="docComment;method#selectBookInfo#0;class#Dao#0" />
-            <element signature="method#selectBookInfo#0;class#Dao#0" />
-            <element signature="docComment;method#selectBookInfo#1;class#Dao#0" />
-            <element signature="method#selectBookInfo#1;class#Dao#0" />
-            <element signature="method#updateBook#0;class#Dao#0" />
-            <element signature="docComment;method#close#0;class#Dao#0" />
-            <element signature="method#close#0;class#Dao#0" />
-            <element signature="docComment;method#executeQuery#0;class#Dao#0" />
-            <element signature="method#executeQuery#0;class#Dao#0" />
-            <element signature="docComment;method#executeUpdate#0;class#Dao#0" />
-            <element signature="method#executeUpdate#0;class#Dao#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LoginFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="129" column="1" selection-start-line="129" selection-start-column="1" selection-end-line="129" selection-end-column="1" />
-          <folding>
-            <element signature="method#actionPerformed#0;class#BookLoginAction#0;class#LoginFrame#0" />
-            <element signature="method#actionPerformed#0;class#BookResetAction#0;class#LoginFrame#0" />
-            <element signature="method#setMainPanel#0;class#LoginFrame#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JComPz/ReaderMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="initializer##0;class#ReaderMap#0" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iframe/BookAddIFrame.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -838,41 +813,146 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/CreatecdIcon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JComPz/ReaderMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="initializer##0;class#ReaderMap#0" />
+            <element signature="e#993#994#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LoginFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1160">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+          <folding>
+            <element signature="method#actionPerformed#0;class#BookResetAction#0;class#LoginFrame#0" />
+            <element signature="method#setMainPanel#0;class#LoginFrame#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="146" column="84" selection-start-line="146" selection-start-column="84" selection-end-line="146" selection-end-column="84" />
+        <state relative-caret-position="220">
+          <caret line="91" column="37" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
           <folding>
             <element signature="method#Library#0;class#Library#0" />
+            <element signature="method#creatMenuBar#0;class#Library#0" />
+            <element signature="method#createToolBar#0;class#Library#0" />
             <element signature="docComment;method#main#0;class#Library#0" />
             <element signature="method#main#0;class#Library#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iframe/ReaderModiAndDel.java">
+    <entry file="file://$PROJECT_DIR$/src/iframe/BookModiAndDelFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        <state relative-caret-position="224">
+          <caret line="193" column="44" lean-forward="true" selection-start-line="193" selection-start-column="44" selection-end-line="193" selection-end-column="44" />
+          <folding>
+            <element signature="docComment;method#setMainPanel#0;class#BookModiAndDelFrame#0" />
+            <element signature="method#buildBook#0;class#6672:9720" />
+            <element signature="method#checkValid#0;class#6672:9720" />
+            <element signature="docComment;method#getBookInfos#0;class#BookModiAndDelFrame#0" />
+            <element signature="method#getBookInfos#0;class#BookModiAndDelFrame#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iframe/ReaderAddIFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="178" column="32" selection-start-line="178" selection-start-column="32" selection-end-line="178" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="290" column="36" selection-start-line="290" selection-start-column="36" selection-end-line="290" selection-end-column="36" />
+          <folding>
+            <element signature="docComment;method#Dao#0;class#Dao#0" />
+            <element signature="method#Dao#0;class#Dao#0" />
+            <element signature="docComment;method#check#0;class#Dao#0" />
+            <element signature="method#check#0;class#Dao#0" />
+            <element signature="docComment;method#selectBookCategory#0;class#Dao#0" />
+            <element signature="method#selectBookCategory#0;class#Dao#0" />
+            <element signature="docComment;method#insertBook#0;class#Dao#0" />
+            <element signature="docComment;method#insertReader#0;class#Dao#0" />
+            <element signature="docComment;method#selectBookInfo#0;class#Dao#0" />
+            <element signature="method#selectBookInfo#0;class#Dao#0" />
+            <element signature="docComment;method#selectBookInfo#1;class#Dao#0" />
+            <element signature="method#selectBookInfo#1;class#Dao#0" />
+            <element signature="method#selectReader#0;class#Dao#0" />
+            <element signature="docComment;method#close#0;class#Dao#0" />
+            <element signature="method#close#0;class#Dao#0" />
+            <element signature="docComment;method#executeQuery#0;class#Dao#0" />
+            <element signature="method#executeQuery#0;class#Dao#0" />
+            <element signature="docComment;method#executeUpdate#0;class#Dao#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/MenuActions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
+        <state relative-caret-position="204">
+          <caret line="98" column="71" lean-forward="true" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="71" />
           <folding>
+            <element signature="initializer##0;class#MenuActions#0" />
             <element signature="docComment;class#BookAddAction#0;class#MenuActions#0" />
             <element signature="class#BookAddAction#0;class#MenuActions#0" />
             <element signature="method#BookAddAction#0;class#BookAddAction#0;class#MenuActions#0" />
             <element signature="method#actionPerformed#0;class#BookAddAction#0;class#MenuActions#0" />
             <element signature="class#BookModiAction#0;class#MenuActions#0" />
-            <element signature="method#BookModiAndDelAction#0;class#BookModiAndDelAction#0;class#MenuActions#0" />
-            <element signature="method#actionPerformed#0;class#BookModiAndDelAction#0;class#MenuActions#0" />
+            <element signature="method#BookModiAction#0;class#BookModiAction#0;class#MenuActions#0" />
+            <element signature="method#actionPerformed#0;class#BookModiAction#0;class#MenuActions#0" />
             <element signature="class#ExitAction#0;class#MenuActions#0" />
             <element signature="method#ExitAction#0;class#ExitAction#0;class#MenuActions#0" />
+            <element signature="class#ReaderAddAction#0;class#MenuActions#0" />
             <element signature="method#ReaderAddAction#0;class#ReaderAddAction#0;class#MenuActions#0" />
             <element signature="method#actionPerformed#0;class#ReaderAddAction#0;class#MenuActions#0" />
+            <element signature="class#ReaderModiAndDelAction#0;class#MenuActions#0" />
+            <element signature="method#ReaderModiAndDelAction#0;class#ReaderModiAndDelAction#0;class#MenuActions#0" />
+            <element signature="method#actionPerformed#0;class#ReaderModiAndDelAction#0;class#MenuActions#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+          <folding>
+            <element signature="e#1522#1523#0" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iframe/ReaderModiAndDelIFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="332" selection-start-line="332" selection-end-line="332" />
+          <folding>
+            <element signature="method#ReaderModiAndDelIFrame#0;class#ReaderModiAndDelIFrame#0" />
+            <element signature="class#9084:9222" />
+            <element signature="e#10611#10612#0" expanded="true" />
+            <element signature="e#10670#10671#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -69,7 +69,6 @@ public class BookModiAndDelFrame extends JInternalFrame {
         mainPanel.setLayout(bdLayout);
         mainPanel.setBounds(100, 100, 593, 406);
         mainPanel.setBorder(new EmptyBorder(5, 10, 5, 10));
-//        mainPanel.setPreferredSize();
 
         /* scroll pane. */
         JScrollPane scrollPane = new JScrollPane();

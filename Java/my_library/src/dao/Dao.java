@@ -1,6 +1,8 @@
 package dao;
 
 import JComPz.BookMap;
+import com.sun.org.apache.xpath.internal.operations.Bool;
+import com.sun.xml.internal.fastinfoset.algorithm.BooleanEncodingAlgorithm;
 import model.BookInfo;
 import model.BookType;
 import model.Operator;
@@ -69,6 +71,21 @@ public class Dao {
         return operator;
     }
 
+    public static boolean deleteReader(String isbn) {
+        boolean successful = false;
+        String sql = "DELETE FROM tb_reader WHERE ISBN='" + isbn + "';";
+
+        try {
+            Dao.executeUpdate(sql);
+            successful = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        Dao.close();
+        return successful;
+    }
+
     /**
      * 查询书的类别
      *
@@ -133,7 +150,7 @@ public class Dao {
                 .getAge() + ",'" + r.getIdentityCard() + "','" + Date.valueOf(r.getValidDate()) + "'," + r
                 .getMaxNum() + ",'" + r.getTelNumber() + "','" + r.getKeepMoney() + "'," + r
                 .getIdentityCardType() + ",'" + r.getOccupation() + "','" + r.getNumber() +
-                "','" + Date.valueOf(r.getValidDate()) + "')";
+                "','" + Date.valueOf(r.getStartDate()) + "')";
         try {
             executeUpdate(sql);
             successful = true;
@@ -211,6 +228,43 @@ public class Dao {
         return bookInfoList;
     }
 
+    /**
+     * 返回由所有读者组成的List
+     *
+     * @return
+     */
+    public static List<Reader> selectReader() {
+        Vector<Reader> readerVector = new Vector<>();
+        String sql = "SELECT * FROM tb_reader";
+
+        try {
+            ResultSet resultSet = Dao.executeQuery(sql);
+
+            while (resultSet.next()) {
+                Reader reader = new Reader();
+                reader.setName(resultSet.getString("name"));
+                reader.setSex(resultSet.getString("sex"));
+                reader.setAge(resultSet.getInt("age"));
+                reader.setIdentityCard(resultSet.getString("identityCard"));
+                reader.setValidDate(resultSet.getString("date"));
+                reader.setMaxNum(resultSet.getInt("maxNum"));
+                reader.setTelNumber(resultSet.getString("tel"));
+                reader.setKeepMoney(resultSet.getDouble("keepMoney"));
+                reader.setIdentityCardType(resultSet.getInt("zj"));
+                reader.setOccupation(resultSet.getString("zy"));
+                reader.setNumber(resultSet.getString("ISBN"));
+                reader.setStartDate(resultSet.getString("bztime"));
+
+                readerVector.add(reader);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        Dao.close();
+        return readerVector;
+    }
+
     public static Boolean updateBook(BookInfo b) {
         boolean successful = false;
         try {
@@ -225,6 +279,33 @@ public class Dao {
             e.printStackTrace();
         }
 
+        return successful;
+    }
+
+    /**
+     * 对数据库读者信息表的更新
+     *
+     * @param r
+     * @return
+     */
+    public static Boolean updateReader(Reader r) {
+        Boolean successful = false;
+        String sql = "UPDATE tb_reader SET name='" + r.getName() + "',sex='" + r.getSex() + "'," +
+                "age=" + r.getAge() + ",identityCard='" + r.getIdentityCard() + "',date='" +
+                r.getValidDate() + "',maxNum=" + r.getMaxNum() + ",tel='" + r
+                .getTelNumber() + "',keepMoney=" + r.getKeepMoney() + ",zj=" + r.getIdentityCardType() + ",zy='" + r
+                .getOccupation() + "',ISBN='" + r.getNumber() + "',bztime='" + r
+                .getStartDate() + "' WHERE ISBN='" + r.getNumber() + "'";
+        try {
+//            System.out.println(sql);
+            Dao.executeUpdate(sql);
+            successful = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+
+        Dao.close();
         return successful;
     }
 
@@ -273,6 +354,7 @@ public class Dao {
             if (connection == null) {
                 new Dao();
             }
+
             int ret = connection.createStatement().executeUpdate(sql);
             return ret != 0;
         } catch (Exception e) {

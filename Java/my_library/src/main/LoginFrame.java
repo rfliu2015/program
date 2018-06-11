@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.Arrays;
 
 public class LoginFrame extends JFrame {
     private JButton loginButton;
@@ -20,8 +21,9 @@ public class LoginFrame extends JFrame {
 
     private JPanel mainPanel;
     private JPanel southPanel;
+    private static Operator user;
 
-    public LoginFrame() {
+    LoginFrame() {
         super();
 
         /* frame的设置 */
@@ -57,15 +59,27 @@ public class LoginFrame extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        new LoginFrame();
+    /**
+     * 得到当前登录的用户.
+     *
+     * @return
+     */
+    public static Operator getUser() {
+        return user;
     }
 
+    /**
+     * 点击登录按钮的监听器
+     */
     private class BookLoginAction implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            Operator user = Dao.check(username.getText(), new String(password.getPassword()));
-            if (user != null && user.getName() != null) {
+            //检查用户是否存在, 不会返回空
+            user = new Operator();
+            user.setName(username.getText().trim());
+            user.setPassword(new String(password.getPassword()));
+
+            if (Dao.checkAndSet(user)) {
                 try {
                     Library library = new Library();
                     LoginFrame.this.setVisible(false);
@@ -81,6 +95,9 @@ public class LoginFrame extends JFrame {
         }
     }
 
+    /**
+     * 点击重置的监听器
+     */
     private class BookResetAction implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {

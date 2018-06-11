@@ -26,6 +26,7 @@ public class ReaderAddIFrame extends JInternalFrame {
     private JTextField startDate;
     private JTextField readerNum;
     private JTextField deposit;
+    private JRadioButton femaleButton;
 
     public ReaderAddIFrame() {
         super("读者相关信息添加");
@@ -72,8 +73,11 @@ public class ReaderAddIFrame extends JInternalFrame {
         JPanel radioPanel = new JPanel(radioLaout);
         radioLaout.setHgap(0);
         radioLaout.setVgap(0);
+        ButtonGroup buttonGroup = new ButtonGroup();
         maleButton = new JRadioButton("男");
-        JRadioButton femaleButton = new JRadioButton("女");
+        femaleButton = new JRadioButton("女");
+        buttonGroup.add(maleButton);
+        buttonGroup.add(femaleButton);
         radioPanel.add(maleButton);
         radioPanel.add(femaleButton);
         maleButton.setSelected(true);

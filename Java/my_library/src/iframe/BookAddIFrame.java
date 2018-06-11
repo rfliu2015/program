@@ -35,7 +35,7 @@ public class BookAddIFrame extends JInternalFrame {
         setClosable(true);
         BorderLayout borderLayout = new BorderLayout();
         setLayout(borderLayout);
-        setBounds(100, 100, 596, 260);
+        setBounds(100, 100, 396, 300);
 
         /* mainPanel */
         setMainPanel();
@@ -43,7 +43,6 @@ public class BookAddIFrame extends JInternalFrame {
         /* North imageIcon */
         ImageIcon imageIcon = CreatecdIcon.add("bookAdd.jpg");
         JLabel northLabel = new JLabel(imageIcon);
-        northLabel.setPreferredSize(new Dimension(400, 80));
 
         /* bottome panel */
         setsouthPanel();
@@ -71,7 +70,7 @@ public class BookAddIFrame extends JInternalFrame {
             @Override
             public void focusLost(FocusEvent e) {
                 String inputISBN = ISBN.getText();
-                if (!Dao.selectBookInfo(inputISBN).isEmpty()) {
+                if (Dao.selectBookInfo(inputISBN) != null) {
                     JOptionPane.showMessageDialog(null, "添加书号重复！");
                     ISBN.setText("");
                 }

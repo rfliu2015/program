@@ -63,6 +63,9 @@ public class Library extends JFrame {
         //图书信息管理
         bookInfoManagerMItem.add(MenuActions.BOOK_ADD);
         bookInfoManagerMItem.add(MenuActions.BOOK_MODI);
+        //图书类别管理
+        bookTypeManagerMItem.add(MenuActions.BOOK_TYPE_ADD);
+        bookTypeManagerMItem.add(MenuActions.BOOK_TYPE_MODI);
 
         /* bookOrderMenu, "新书订购管理" */
         bookOrderMenu = new JMenu();  //这里string与icon矛盾
@@ -71,6 +74,7 @@ public class Library extends JFrame {
         /* borrowManagerMenu "借阅管理"*/
         borrowManagerMenu = new JMenu();
         borrowManagerMenu.setIcon(CreatecdIcon.add("jyglcd.jpg"));
+        borrowManagerMenu.add(MenuActions.BOOK_BORROW);
 
         /* sysManagerMenu "系统维护"*/
         sysManagerMenu = new JMenu();
@@ -78,6 +82,8 @@ public class Library extends JFrame {
 
         JMenu userManager = new JMenu("用户管理");
         sysManagerMenu.add(userManager);
+        userManager.add(MenuActions.READER_ADD);
+        userManager.add(MenuActions.READER_MODI_AND_DEL);
 
         /* At last add these 4 menu */
         menuBar.add(baseMenu);
@@ -108,15 +114,13 @@ public class Library extends JFrame {
         toolBar.add(bookModiAndDelButton);
 
         /* bookTypeAddButton */
-        JButton bookTypeAddButton = new JButton();
-        ;//action
+        JButton bookTypeAddButton = new JButton(MenuActions.BOOK_TYPE_ADD);
         bookTypeAddButton.setIcon(CreatecdIcon.add("bookTypeAddtb.jpg"));
         bookTypeAddButton.setHideActionText(true);
         toolBar.add(bookTypeAddButton);
 
         /* bookBorrowButton */
-        JButton bookBorrowButton = new JButton();
-        ;//action
+        JButton bookBorrowButton = new JButton(MenuActions.BOOK_BORROW);
         bookBorrowButton.setIcon(new ImageIcon(
                 this.getClass().getResource("/bookBorrowtb.jpg")));
         bookBorrowButton.setHideActionText(true);

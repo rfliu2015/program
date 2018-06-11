@@ -96,60 +96,25 @@ public class ReaderModiAndDelIFrame extends JInternalFrame {
         scrollPane.setViewportView(table);
         table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         mainPanel.add(scrollPane);
-        table.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                int r = table.getSelectedRow();
-
-                /* read from table */
-                String _name = table.getValueAt(r, 0).toString().trim();
-                String _sex = table.getValueAt(r, 1).toString().trim();
-                String _age = table.getValueAt(r, 2).toString().trim();
-                String _cardNum = table.getValueAt(r, 3).toString().trim();
-                String _date = table.getValueAt(r, 4).toString().trim();
-                String _maxNum = table.getValueAt(r, 5).toString().trim();
-                String _tel = table.getValueAt(r, 6).toString().trim();
-                String _keepMoney = table.getValueAt(r, 7).toString().trim();
-                String _cardType = table.getValueAt(r, 8).toString().trim();
-                String _job = table.getValueAt(r, 9).toString().trim();
-                String _number = table.getValueAt(r, 10).toString().trim();
-                String _startDate = table.getValueAt(r, 11).toString().trim();
-
-                /* write to textfield */
-                name.setText(_name);
-                JRadioButton button = _sex.equals("男") ? maleButton : femaleButton;
-                JRadioButton another = _sex.equals("男") ? femaleButton : maleButton;
-                button.setSelected(true);
-                another.setSelected(false);
-                age.setText(_age);
-                cardNum.setText(_cardNum);
-                validDate.setText(_date);
-                maxNum.setText(_maxNum);
-                tel.setText(_tel);
-                deposit.setText(_keepMoney);
-                cardComboBox.setSelectedItem(_cardType);
-                occupation.setText(_job);
-                readerNum.setText(_number);
-                startDate.setText(_startDate);
-            }
-        });
+        table.addMouseListener(new TableListener());
 
         /* reader panel setting */
         GridLayout gridLayout = new GridLayout(0, 4);
         JPanel readerPanel = new JPanel(gridLayout);
+        gridLayout.setHgap(5);
         readerPanel.setPreferredSize(new Dimension(590, 170));
-        readerPanel.setBorder(new EmptyBorder(10, 0, 10, 0));
+        readerPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         mainPanel.add(readerPanel, BorderLayout.SOUTH);
 
         //第一行
         JLabel nameLabel = new JLabel("姓    名");
-        nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        nameLabel.setHorizontalAlignment(SwingConstants.LEFT);
         name = new JTextField(13);
         readerPanel.add(nameLabel);
         readerPanel.add(name);
 
         JLabel sexLabel = new JLabel("性   别");
-        sexLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        sexLabel.setHorizontalAlignment(SwingConstants.LEFT);
         JPanel buttonPanel = new JPanel();
         maleButton = new JRadioButton("男");
         femaleButton = new JRadioButton("女");
@@ -163,65 +128,65 @@ public class ReaderModiAndDelIFrame extends JInternalFrame {
 
         //第二行
         JLabel ageLabel = new JLabel("年    龄");
-        ageLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        ageLabel.setHorizontalAlignment(SwingConstants.LEFT);
         age = new JTextField(13);
         readerPanel.add(ageLabel);
         readerPanel.add(age);
 
         JLabel occupationLabel = new JLabel("职    业");
-        occupationLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        occupationLabel.setHorizontalAlignment(SwingConstants.LEFT);
         occupation = new JTextField(13);
         readerPanel.add(occupationLabel);
         readerPanel.add(occupation);
 
         //第三行
         JLabel cardTypeLabel = new JLabel("有效证件");
-        cardTypeLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        cardTypeLabel.setHorizontalAlignment(SwingConstants.LEFT);
         cardComboBox = new JComboBox<>(ReaderMap.getAllCardTypes());
         readerPanel.add(cardTypeLabel);
         readerPanel.add(cardComboBox);
 
         JLabel cardNumLabel = new JLabel("证件号码");
-        cardNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        cardNumLabel.setHorizontalAlignment(SwingConstants.LEFT);
         cardNum = new JTextField(13);
         readerPanel.add(cardNumLabel);
         readerPanel.add(cardNum);
 
         //第四行
         JLabel startDateLabel = new JLabel("办证日期");
-        startDateLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        startDateLabel.setHorizontalAlignment(SwingConstants.LEFT);
         startDate = new JTextField(13);
         readerPanel.add(startDateLabel);
         readerPanel.add(startDate);
 
         JLabel maxNumLabel = new JLabel("最大借书量");
-        maxNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        maxNumLabel.setHorizontalAlignment(SwingConstants.LEFT);
         maxNum = new JTextField(13);
         readerPanel.add(maxNumLabel);
         readerPanel.add(maxNum);
 
         //第五行
         JLabel validDateLabel = new JLabel("会员有效日期");
-        validDateLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        validDateLabel.setHorizontalAlignment(SwingConstants.LEFT);
         validDate = new JTextField();
         readerPanel.add(validDateLabel);
         readerPanel.add(validDate);
 
         JLabel telLabel = new JLabel("电    话");
-        telLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        telLabel.setHorizontalAlignment(SwingConstants.LEFT);
         tel = new JTextField(13);
         readerPanel.add(telLabel);
         readerPanel.add(tel);
 
         //第六行
         JLabel depositLabel = new JLabel("押    金");
-        depositLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        depositLabel.setHorizontalAlignment(SwingConstants.LEFT);
         deposit = new JTextField(13);
         readerPanel.add(depositLabel);
         readerPanel.add(deposit);
 
         JLabel readerNumLabel = new JLabel("读者编号");
-        readerNumLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        readerNumLabel.setHorizontalAlignment(SwingConstants.LEFT);
         readerNum = new JTextField(13);
         readerPanel.add(readerNumLabel);
         readerPanel.add(readerNum);
@@ -274,7 +239,6 @@ public class ReaderModiAndDelIFrame extends JInternalFrame {
             public void actionPerformed(ActionEvent e) {
                 checkValid();
                 buildReader();
-
 
                 boolean successful = Dao.updateReader(reader);
                 if (successful) {
@@ -343,5 +307,43 @@ public class ReaderModiAndDelIFrame extends JInternalFrame {
                 return string.length() == 0;
             }
         });
+    }
+
+    private class TableListener extends MouseAdapter {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            int r = table.getSelectedRow();
+
+            /* read from table */
+            String _name = table.getValueAt(r, 0).toString().trim();
+            String _sex = table.getValueAt(r, 1).toString().trim();
+            String _age = table.getValueAt(r, 2).toString().trim();
+            String _cardNum = table.getValueAt(r, 3).toString().trim();
+            String _date = table.getValueAt(r, 4).toString().trim();
+            String _maxNum = table.getValueAt(r, 5).toString().trim();
+            String _tel = table.getValueAt(r, 6).toString().trim();
+            String _keepMoney = table.getValueAt(r, 7).toString().trim();
+            String _cardType = table.getValueAt(r, 8).toString().trim();
+            String _job = table.getValueAt(r, 9).toString().trim();
+            String _number = table.getValueAt(r, 10).toString().trim();
+            String _startDate = table.getValueAt(r, 11).toString().trim();
+
+            /* write to textfield */
+            name.setText(_name);
+            JRadioButton button = _sex.equals("男") ? maleButton : femaleButton;
+            JRadioButton another = _sex.equals("男") ? femaleButton : maleButton;
+            button.setSelected(true);
+            another.setSelected(false);
+            age.setText(_age);
+            cardNum.setText(_cardNum);
+            validDate.setText(_date);
+            maxNum.setText(_maxNum);
+            tel.setText(_tel);
+            deposit.setText(_keepMoney);
+            cardComboBox.setSelectedItem(_cardType);
+            occupation.setText(_job);
+            readerNum.setText(_number);
+            startDate.setText(_startDate);
+        }
     }
 }

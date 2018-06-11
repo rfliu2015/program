@@ -1,16 +1,21 @@
 package model;
 
 public class Operator {
-    private String id = null;
-    private String grade;
+    private int id;
+    private int grade;  //是否是admin
     private String name = null;
     private String password;
+    private String sex;
+    private int age;
+    private String identityCard;
+    private String workDate;
+    private String tel;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public String getGrade() {
+    public int getGrade() {
         return grade;
     }
 
@@ -22,11 +27,51 @@ public class Operator {
         return password;
     }
 
-    public void setGrade(String grade) {
+    public String getSex() {
+        return sex;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getIdentityCard() {
+        return identityCard;
+    }
+
+    public String getWorkDate() {
+        return workDate;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public void setWorkDate(String workDate) {
+        this.workDate = workDate;
+    }
+
+    public void setIdentityCard(String identityCard) {
+        this.identityCard = identityCard;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public void setGrade(int grade) {
         this.grade = grade;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
 
         this.id = id;
     }

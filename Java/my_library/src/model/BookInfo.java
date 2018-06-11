@@ -1,5 +1,7 @@
 package model;
 
+import dao.Dao;
+
 public class BookInfo {
     private String ISBN;
     private Integer typeId = null;
@@ -10,6 +12,10 @@ public class BookInfo {
     private String publisher;
     private String publicationDate;
     private double price;
+
+    public static BookInfo getBookInfo(String isbn) {
+        return Dao.selectBookInfo(isbn);
+    }
 
     public void setISBN(String ISBN) {
         this.ISBN = ISBN;

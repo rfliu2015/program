@@ -1,26 +1,30 @@
 package main;
 
-import iframe.BookAddIFrame;
-import iframe.BookModiAndDelFrame;
-import iframe.ReaderAddIFrame;
-import iframe.ReaderModiAndDelIFrame;
+import iframe.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MenuActions {
     private static Map<String, JInternalFrame> frames = new HashMap<>();
     static BookAddAction BOOK_ADD;
+    static BookBorrowAction BOOK_BORROW;
     static BookModiAction BOOK_MODI;
+    static BookTypeAddAction BOOK_TYPE_ADD;
+    static BookTypeModiAction BOOK_TYPE_MODI;
     static ReaderAddAction READER_ADD;
     static ReaderModiAndDelAction READER_MODI_AND_DEL;
     static ExitAction EXIT;
 
     static {
         BOOK_ADD = new BookAddAction();
+        BOOK_BORROW = new BookBorrowAction();
         BOOK_MODI = new BookModiAction();
+        BOOK_TYPE_ADD = new BookTypeAddAction();
+        BOOK_TYPE_MODI = new BookTypeModiAction();
         READER_ADD = new ReaderAddAction();
         READER_MODI_AND_DEL = new ReaderModiAndDelAction();
         EXIT = new ExitAction();
@@ -47,6 +51,24 @@ public class MenuActions {
         }
     }
 
+    private static class BookBorrowAction extends AbstractAction {
+        public BookBorrowAction() {
+            super("图书借阅管理");
+            putValue(LONG_DESCRIPTION, "图书借阅管理");
+            putValue(SHORT_DESCRIPTION, "图书借阅管理");
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!frames.containsKey("图书借阅管理") || frames.get("图书借阅管理").isClosed()) {
+                BookBorrowIFrame bookBorrow = new BookBorrowIFrame();
+                frames.put("图书借阅管理", bookBorrow);
+                Library.addIFrame(bookBorrow);
+                bookBorrow.setVisible(true);
+            }
+        }
+    }
+
     private static class BookModiAction extends AbstractAction {
         BookModiAction() {
             super("图书信息修改和删除");
@@ -61,6 +83,42 @@ public class MenuActions {
                 frames.put("图书信息修改和添加", bookModiAndDel);
                 Library.addIFrame(bookModiAndDel);
                 bookModiAndDel.setVisible(true);
+            }
+        }
+    }
+
+    private static class BookTypeAddAction extends AbstractAction {
+        public BookTypeAddAction() {
+            super("图书类型添加");
+            putValue(LONG_DESCRIPTION, "图书类型添加");
+            putValue(SHORT_DESCRIPTION, "图书类型添加");
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!frames.containsKey("图书类型添加") || frames.get("图书类型添加").isClosed()) {
+                BookTypeAddIFrame bookTypeAdd = new BookTypeAddIFrame();
+                frames.put("图书类型添加", bookTypeAdd);
+                Library.addIFrame(bookTypeAdd);
+                bookTypeAdd.setVisible(true);
+            }
+        }
+    }
+
+    private static class BookTypeModiAction extends AbstractAction {
+        public BookTypeModiAction() {
+            super("图书类别修改");
+            putValue(LONG_DESCRIPTION, "图书类别修改");
+            putValue(SHORT_DESCRIPTION, "图书类别修改");
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (!frames.containsKey("图书类别修改") || frames.get("图书类别修改").isClosed()) {
+                BookTypeModiIFrame bookTypeModi = new BookTypeModiIFrame();
+                frames.put("图书类别修改", bookTypeModi);
+                Library.addIFrame(bookTypeModi);
+                bookTypeModi.setVisible(true);
             }
         }
     }
@@ -113,4 +171,5 @@ public class MenuActions {
             }
         }
     }
+
 }

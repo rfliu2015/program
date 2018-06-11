@@ -1,6 +1,6 @@
 package iframe;
 
-import JComPz.BookMap;
+import JComPz.BookTypeMap;
 import dao.Dao;
 import model.BookInfo;
 import model.BookType;
@@ -55,9 +55,7 @@ public class BookModiAndDelFrame extends JInternalFrame {
         this.add(north, BorderLayout.NORTH);
         getContentPane().add(mainPanel);
         getContentPane().add(bottomePanel, BorderLayout.SOUTH);
-        System.out.println("I'm running!");
 
-//        setVisible(true);
     }
 
     /**
@@ -94,7 +92,7 @@ public class BookModiAndDelFrame extends JInternalFrame {
                 String price_ = table.getValueAt(row, 7).toString().trim();
 
                 ISBN.setText(isbn_);
-                bookTypeModel.setSelectedItem(BookMap.getType(type_));
+                bookTypeModel.setSelectedItem(BookTypeMap.getType(type_));
                 bookName.setText(name_);
                 author.setText(author_);
                 publisher.setText(publisher_);

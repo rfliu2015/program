@@ -223,5 +223,7 @@ public class BookBorrowIFrame extends JInternalFrame {
             item[0] = borrow.getBookInfo().getISBN();
 //            item[1]=borrow.ge
         }
+
+        return items;
     }
 }
